@@ -1,0 +1,22 @@
+{
+  "name": "fetcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fxp/fetcher.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fxp/fetcher/issues"
+  },
+  "homepage": "https://github.com/fxp/fetcher#readme",
+  "dependencies": {
+    "download": "^6.2.5"
+  }
+}
