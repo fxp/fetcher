@@ -12,19 +12,23 @@ var id = undefined;
 var output_dir = undefined;
 var output_filename = undefined;
 
+// TODO do some logging
+
 if (!module.parent) {
     id = process.argv[2];
     output_dir = process.argv[3];
     output_filename = id + ".apk";
+    download(URL_BASE + id, output_dir, {filename: output_filename})
+        .then(function () {
+            console.log("downloaded", output_dir, id);
+        }, function (err) {
+            console.error(err.message)
+        })
 } else {
-    // TODO for module usage
+    module.exports = {
+      download: function(id, output_dir){
+        output_filename = id + ".apk";
+        return download(URL_BASE + id, output_dir, {filename: output_filename})
+      }
+    }
 }
-
-// TODO do some logging
-download(URL_BASE + id, output_dir, {filename: output_filename})
-    .then(function () {
-        console.log("downloaded", output_dir, id);
-    }, function (err) {
-        console.error(err.message)
-    })
-

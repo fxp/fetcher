@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/fxp/fetcher#readme",
   "dependencies": {
-    "download": "^6.2.5"
+    "download": "^6.2.5",
+    "run-parallel-limit": "^1.0.4"
   }
 }
